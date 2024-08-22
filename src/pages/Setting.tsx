@@ -86,7 +86,7 @@ function Setting(): ReactElement {
     localTime.setDate(date?.startDate?.getDate() || localTime.getDate())
     try {
       const response: AxiosResponse<any> = await axios.post(
-        'http://95.216.240.153:5000/api/emailSend',
+        'https://email-notification-backend.onrender.com/api/emailSend',
         {
           interval,
           dateTime: localTime.toUTCString(),
